@@ -1,0 +1,9 @@
+.conatiner-image {
+    width: 54px;
+}
+
+.nav-icon {
+    min-height: 28px;
+    padding: 0 6px;
+    cursor: pointer;
+}
