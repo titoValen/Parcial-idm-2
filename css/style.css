@@ -7,3 +7,78 @@
     padding: 0 6px;
     cursor: pointer;
 }
+
+/* Overlay para el carrusel */
+.carousel {
+    position: relative;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.carousel-overlay * {
+    pointer-events: auto;
+}
+
+.carousel-overlay-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.carousel-overlay-content h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.carousel-overlay-content p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.carousel-overlay-content .btn {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    text-shadow: none;
+}
+
+/* Responsive para el overlay */
+@media (max-width: 768px) {
+    .carousel-overlay-content h2 {
+        font-size: 2rem;
+    }
+    
+    .carousel-overlay-content p {
+        font-size: 1.2rem;
+    }
+    
+    .carousel-overlay-content .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .carousel-overlay-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-overlay-content p {
+        font-size: 1rem;
+    }
+}

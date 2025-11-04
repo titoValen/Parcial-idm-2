@@ -19,9 +19,11 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                    <img src="img/WTF NEGRO.png" alt="Logo de Rewind Jerseys" class="d-inline-block align-text-top" style="width: 54px;">
+                    <img src="img/WTF%20NEGRO.png" alt="Logo de Rewind Jerseys" class="d-inline-block align-text-top"
+                        style="width: 54px;">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -29,13 +31,59 @@
                         <li class="nav-item"><a href="#" class="nav-link">Productos</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Galería</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
-                        <li class="nav-item"><img src="img/icons/cart.svg" alt="Icono de carrito de compras" class="nav-icon"></li>
-                        <li class="nav-item"><img src="img/icons/info-circle.svg" alt="Icono de información" class="nav-icon"></li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <img src="img/icons/cart.svg" alt="Icono de carrito de compras" class="nav-icon">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <img src="img/icons/info-circle.svg" alt="Icono de información" class="nav-icon">
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <figure class="carousel-item active">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="img/carusel/imagen_1/superior1920.webp">
+                    <source media="(min-width: 768px)" srcset="img/carusel/imagen_1/1200x675.webp">
+                    <source media="(min-width: 500px)" srcset="img/carusel/imagen_1/500x281.webp">
+                    <img src="img/carusel/imagen_1/500x281.webp" class="d-block w-100"
+                        alt="Imagen de Messi celebrando un gol">
+                </picture>
+            </figure>
+            <figure class="carousel-item">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="img/carusel/imagen_2/superior1920.webp">
+                    <source media="(min-width: 768px)" srcset="img/carusel/imagen_2/1200x675.webp">
+                    <source media="(min-width: 500px)" srcset="img/carusel/imagen_2/500x281.webp">
+                    <img src="img/carusel/imagen_2/500x281.webp" class="d-block w-100"
+                        alt="Imagen de Salah celebrando un gol">
+                </picture>
+            </figure>
+            <figure class="carousel-item">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="img/carusel/imagen_3/900x506.webp">
+                    <img src="img/carusel/imagen_3/450x253.webp" class="d-block w-100"
+                        alt="Imagen de Son celebrando un gol">
+                </picture>
+            </figure>
+        </div>
+        <!-- Overlay fijo sobre todo el carrusel -->
+        <div class="carousel-overlay">
+            <div class="carousel-overlay-content">
+                <h2>Rewind Jerseys</h2>
+                <p>Revive los momentos más épicos del fútbol</p>
+                <a href="#" class="btn btn-primary btn-lg">Ver Camisetas</a>
+            </div>
+        </div>
+    </div>
 
     <div class="container-lg">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
