@@ -1,3 +1,7 @@
+/*
+   NAVEGACIÓN
+ */
+
 .conatiner-image {
     width: 54px;
 }
@@ -8,11 +12,52 @@
     cursor: pointer;
 }
 
-/* Overlay para el carrusel */
+
+/*
+   CARRUSEL PRINCIPAL (HERO)
+ */
+
+/* Contenedor base del carrusel */
 .carousel {
     position: relative;
 }
 
+#carouselExampleSlidesOnly {
+    height: 100vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+#carouselExampleSlidesOnly .carousel-inner {
+    height: 100%;
+}
+
+#carouselExampleSlidesOnly .carousel-item {
+    height: 100%;
+    overflow: hidden;
+}
+
+#carouselExampleSlidesOnly .carousel-item picture {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+/* Efecto parallax en las imágenes */
+#carouselExampleSlidesOnly .carousel-item img {
+    height: 120%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: translateY(-10%);
+    transition: transform 0.3s ease-out;
+}
+
+#carouselExampleSlidesOnly .carousel-item.active img {
+    animation: parallaxZoom 7.5s ease-out forwards;
+}
+
+/* Overlay del carrusel principal */
 .carousel-overlay {
     position: absolute;
     top: 0;
@@ -36,8 +81,10 @@
     color: white;
     padding: 20px;
     max-width: 800px;
+    animation: fadeInUp 1s ease-out;
 }
 
+.carousel-overlay-content h1,
 .carousel-overlay-content h2 {
     font-size: 3rem;
     font-weight: bold;
@@ -57,33 +104,9 @@
     text-shadow: none;
 }
 
-/* Responsive para el overlay */
-@media (max-width: 768px) {
-    .carousel-overlay-content h2 {
-        font-size: 2rem;
-    }
-    
-    .carousel-overlay-content p {
-        font-size: 1.2rem;
-    }
-    
-    .carousel-overlay-content .btn {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-}
 
-@media (max-width: 500px) {
-    .carousel-overlay-content h2 {
-        font-size: 1.5rem;
-    }
-    
-    .carousel-overlay-content p {
-        font-size: 1rem;
-    }
-}
+/* CARRUSEL DE CARDS */
 
-/* Estilo para el carrusel de cards */
 .cards-wrapper {
     display: flex;
     justify-content: center;
@@ -98,7 +121,7 @@
     min-height: 500px;
 }
 
-/* Hacer visible los controles del carrusel de cards */
+/* Controles del carrusel de cards */
 .carousel-control-prev,
 .carousel-control-next {
     width: 5%;
@@ -118,17 +141,10 @@
     padding: 20px;
 }
 
-/* Responsive: una card en móviles */
-@media (max-width: 768px) {
-    .cards-wrapper .card {
-        width: 100%;
-        max-width: 20rem;
-    }
-    
-    .cards-wrapper {
-        padding: 1rem 0.5rem;
-    }
-}
+
+/*
+   IMÁGENES DE PRODUCTOS
+ */
 
 .img-retro {
     height: 400px;
@@ -143,14 +159,101 @@
     object-fit: contain;
 }
 
-@media (min-width: 800px) {
-    .img-retro {
-        height: 450px;
+
+/*
+   ANIMACIONES
+ */
+
+@keyframes parallaxZoom {
+    0% {
+        transform: translateY(-10%) scale(1);
+    }
+    100% {
+        transform: translateY(0%) scale(1.1);
     }
 }
 
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*
+   RESPONSIVE - TABLETS Y MENORES
+ */
+
 @media (max-width: 768px) {
+    /* Carrusel principal */
+    #carouselExampleSlidesOnly {
+        height: 70vh;
+        min-height: 400px;
+    }
+    
+    .carousel-overlay-content h1,
+    .carousel-overlay-content h2 {
+        font-size: 2rem;
+    }
+    
+    .carousel-overlay-content p {
+        font-size: 1.2rem;
+    }
+    
+    .carousel-overlay-content .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    /* Carrusel de cards */
+    .cards-wrapper .card {
+        width: 100%;
+        max-width: 20rem;
+    }
+    
+    .cards-wrapper {
+        padding: 1rem 0.5rem;
+    }
+
+    /* Imágenes de productos */
     .img-retro {
         height: 350px;
+    }
+}
+
+
+/*
+   RESPONSIVE - MÓVILES
+ */
+
+@media (max-width: 500px) {
+    #carouselExampleSlidesOnly {
+        height: 60vh;
+        min-height: 350px;
+    }
+    
+    .carousel-overlay-content h1,
+    .carousel-overlay-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-overlay-content p {
+        font-size: 1rem;
+    }
+}
+
+
+/*
+   RESPONSIVE - DESKTOP GRANDE
+ */
+
+@media (min-width: 800px) {
+    .img-retro {
+        height: 450px;
     }
 }
