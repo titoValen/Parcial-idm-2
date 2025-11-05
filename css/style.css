@@ -12,6 +12,33 @@
     cursor: pointer;
 }
 
+.modal-body {
+    display: grid;
+    place-items: center;
+}
+
+.modal-body .redes-sociales {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: .5rem;
+}
+
+.modal-body .redes-sociales figure {
+    transition: .3s;
+}
+
+.modal-body .redes-sociales figure:hover {
+    transform: scale(1.09);
+}
+
+.modal-body figure img:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.modal-body figure img {
+    max-width: 250px;
+    transition: .45s ease-in-out;
+}
 
 /*
    CARRUSEL PRINCIPAL (HERO)
