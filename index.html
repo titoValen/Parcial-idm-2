@@ -16,7 +16,7 @@
 
 <body>
     <header class="container-xxl">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
                     <img src="img/WTF%20NEGRO.png" alt="Logo de Rewind Jerseys" class="d-inline-block align-text-top"
@@ -28,9 +28,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a href="#" class="nav-link">Productos</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Galería</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+                        <li class="nav-item"><a href="#remeras" class="nav-link">Remeras</a></li>
+                        <li class="nav-item"><a href="#edicion-retro" class="nav-link">Edición retro</a></li>
+                        <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <img src="img/icons/cart.svg" alt="Icono de carrito de compras" class="nav-icon">
@@ -78,12 +78,40 @@
         <!-- Overlay fijo sobre todo el carrusel -->
         <div class="carousel-overlay">
             <div class="carousel-overlay-content">
-                <h2>Rewind Jerseys</h2>
+                <h1>Rewind Jerseys</h1>
                 <p>Revive los momentos más épicos del fútbol</p>
                 <a href="#" class="btn btn-primary btn-lg">Ver Camisetas</a>
             </div>
         </div>
     </div>
+
+    <main class="container-lg">
+        <section id="remeras" class="my-4">
+            <h2>Remeras</h2>
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-inner">
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="edicion-retro" class="mb-4">
+            <h2>Edición retro</h2>
+        </section>
+
+        <section id="contacto" class="mb-4">
+            <h2>Contacto</h2>
+        </section>
+    </main>
 
     <footer class="container-lg">
         <nav class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
@@ -107,6 +135,9 @@
 
     <!-- JS Bootstrap -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script personalizado -->
+    <script type="module" src="js/cardRemera.js"></script>
 </body>
 
 </html>

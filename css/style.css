@@ -82,3 +82,50 @@
         font-size: 1rem;
     }
 }
+
+/* Estilo para el carrusel de cards */
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+
+.cards-wrapper .card {
+    flex: 0 0 auto;
+    width: 20rem;
+    max-width: 90%;
+    min-height: 500px;
+}
+
+/* Hacer visible los controles del carrusel de cards */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 500px;
+    border-radius: 1rem;
+    padding: 20px;
+}
+
+/* Responsive: una card en móviles */
+@media (max-width: 768px) {
+    .cards-wrapper .card {
+        width: 100%;
+        max-width: 20rem;
+    }
+    
+    .cards-wrapper {
+        padding: 1rem 0.5rem;
+    }
+}
