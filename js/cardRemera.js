@@ -32,7 +32,7 @@ function crearCard(remera) {
             <img src="${imgSmall}" class="${imgClass}" alt="Camiseta ${remera.equipo}">
         </picture>
         <div class="card-body">
-            <h3 class="card-title">${remera.equipo}</h3>
+            <h4 class="card-title">${remera.equipo}</h4>
             <p class="card-text">Camiseta ${remera.categoria} ${precioFormateado}</p>
             <button class="btn btn-primary" data-id="${remera.id}">Agregar al carrito</button>
         </div>

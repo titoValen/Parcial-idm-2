@@ -28,8 +28,20 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a href="#remeras" class="nav-link">Remeras</a></li>
-                        <li class="nav-item"><a href="#edicion-retro" class="nav-link">Edición retro</a></li>
+                        <li class="nav-item"><a href="#introduccion" class="nav-link">Introducción</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Remeras
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a href="#edicion-actual" class="nav-link">Edición actual</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="nav-item"><a href="#edicion-retro" class="nav-link">Edición retro</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a href="#preguntas-frecuentes" class="nav-link">Preguntas frecuentes</a>
                         </li>
                         <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
@@ -83,7 +95,8 @@
                                         </figure>
 
                                         <figure>
-                                            <a target="_blank" href="https://x.com/dev__valen?t=JJucEmFeO8Dyjvpd_54BgQ&s=08">
+                                            <a target="_blank"
+                                                href="https://x.com/dev__valen?t=JJucEmFeO8Dyjvpd_54BgQ&s=08">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42"
                                                     class="bi bi-twitter-x" viewBox="0 0 16 16">
                                                     <path
@@ -145,30 +158,62 @@
     </div>
 
     <main class="container-lg">
-        <section id="remeras" class="my-4">
-            <h2>Remeras</h2>
-            <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-inner">
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
-            </div>
+        <section id="introduccion">
+            <h2 class="my-4 text-center">Introducción</h2>
+            <p>En <strong>Rewind Jerseys</strong> celebramos la historia y la pasión del fútbol a través de
+                sus camisetas. Nuestro
+                objetivo es ofrecerte una colección única que une lo mejor del pasado y del presente: desde los diseños
+                icónicos que marcaron época hasta las camisetas más recientes que hoy hacen vibrar a los hinchas.</p>
+            <p>Nacimos de la idea de que cada remera cuenta una historia. Por eso, cuidamos cada detalle
+                para ofrecer
+                productos de calidad, cómodos y fieles a los colores que representan. En <strong>Rewind Jerseys</strong>
+                no solo vendemos camisetas: compartimos la emoción de cada gol, cada recuerdo y cada equipo que nos hizo
+                amar este deporte.</p>
         </section>
 
-        <section id="edicion-retro" class="mb-4">
-            <h2>Edición retro</h2>
+        <section>
+            <h2 class="text-center">Remeras</h2>
+            <article id="edicion-actual" class="my-4">
+                <h3>Edición actual</h3>
+                <p>En <strong>Rewind Jerseys</strong> seguimos cada temporada de cerca para ofrecerte las camisetas más
+                    recientes de clubes y
+                    selecciones de todo el mundo. Cada diseño refleja la identidad actual del equipo, con materiales de
+                    última generación que combinan <strong>comodidad, estilo y rendimiento.</strong></p>
+                <p>Perfectas para entrenar, salir o alentar desde la tribuna, nuestras remeras actuales te
+                    conectan con el
+                    presente del fútbol y te permiten vestir los colores de tus ídolos de hoy.</p>
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-inner">
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </article>
+
+            <article id="edicion-retro" class="mb-4">
+                <h3>Edición retro</h3>
+                <p>Las <strong>remeras retro</strong> son el corazón de Rewind Jerseys. Inspiradas en los momentos que definieron la
+                    historia del fútbol, traemos de vuelta los diseños clásicos que marcaron una época.
+                </p>
+                <p>Cada modelo revive <strong>la esencia, los colores y la nostalgia</strong> de los equipos y selecciones más
+                    emblemáticos, con telas modernas que garantizan confort sin perder el espíritu vintage.
+                </p>
+                <p>Porque algunos recuerdos merecen volver a jugarse, nuestras camisetas retro te permiten revivir las
+                    leyendas que hicieron grande a este deporte.</p>
+            </article>
         </section>
+
 
         <section id="preguntas-frecuentes" class="mb-4">
-            <h2>Preguntas frecuentes</h2>
+            <h2 class="text-center">Preguntas frecuentes</h2>
             <div class="d-flex gap-4">
                 <div class="accordion accordion-flush w-50" id="accordionFlushExample">
                     <div class="accordion-item">
@@ -229,7 +274,7 @@
         </section>
 
         <section id="contacto" class="mb-4">
-            <h2>Contacto</h2>
+            <h2 class="text-center">Contacto</h2>
             <div class="d-flex gap-4">
                 <picture class="w-50">
                     <source media="(min-width: 800px)" srcset="img/ronaldinho_900x563.webp">
