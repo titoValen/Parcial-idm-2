@@ -7,3 +7,7 @@ img {
     height: auto;
     object-fit: cover;
 }
+
+textarea {
+    resize: none;
+}
