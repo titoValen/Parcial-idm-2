@@ -8,13 +8,15 @@ function crearCard(remera) {
     card.className = 'card';
     
     // Determinar qué imágenes usar según la categoría
-    let imgSmall, imgLarge;
+    let imgSmall, imgLarge, imgClass;
     if (remera.categoria === 'actual') {
         imgSmall = remera.imagenes.frente_400;
         imgLarge = remera.imagenes.frente_800;
+        imgClass = 'card-img-top img-actual';
     } else if (remera.categoria === 'retro') {
         imgSmall = remera.imagenes.frente_512;
         imgLarge = remera.imagenes.frente_1024;
+        imgClass = 'card-img-top img-retro';
     }
     
     // Formatear precio
@@ -27,7 +29,7 @@ function crearCard(remera) {
     card.innerHTML = `
         <picture>
             <source media="(min-width: 800px)" srcset="${imgLarge}">
-            <img src="${imgSmall}" class="card-img-top" alt="Camiseta ${remera.equipo}">
+            <img src="${imgSmall}" class="${imgClass}" alt="Camiseta ${remera.equipo}">
         </picture>
         <div class="card-body">
             <h3 class="card-title">${remera.equipo}</h3>
