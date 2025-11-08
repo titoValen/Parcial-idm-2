@@ -34,7 +34,9 @@ function crearCard(remera) {
         <div class="card-body">
             <h4 class="card-title">${remera.equipo}</h4>
             <p class="card-text">Camiseta ${remera.categoria} ${precioFormateado}</p>
-            <button class="btn btn-primary" data-id="${remera.id}">Agregar al carrito</button>
+            <button class="btn-personalizado-primary w-100" data-id="${remera.id}">
+                <span>Agregar al carrito</span>
+            </button>
         </div>
     `;
     
@@ -217,8 +219,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Event listener para los botones de agregar al carrito
     document.addEventListener('click', (e) => {
-        if (e.target.matches('.btn-primary[data-id]')) {
-            const remeraId = parseInt(e.target.dataset.id);
+        // Verificar si se hizo clic en el botón o en el span interno
+        const button = e.target.closest('.btn-personalizado-primary[data-id]');
+        if (button) {
+            const remeraId = parseInt(button.dataset.id);
             mostrarModalCarrito(remeraId);
         }
     });
