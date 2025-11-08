@@ -167,6 +167,49 @@ function generarCarouselRetro() {
     seccionRetro.appendChild(carouselDiv);
 }
 
+// Función para mostrar modal con información del producto
+function mostrarModalCarrito(remeraId) {
+    // Buscar la remera en ambos arrays
+    const remera = [...remerasActuales, ...remerasRetro].find(r => r.id === remeraId);
+    
+    if (!remera) {
+        console.error('Remera no encontrada');
+        return;
+    }
+    
+    // Obtener elementos del modal
+    const modalImagen = document.getElementById('modalProductoImagen');
+    const modalNombre = document.getElementById('modalProductoNombre');
+    const modalCategoria = document.getElementById('modalProductoCategoria');
+    const modalPrecio = document.getElementById('modalProductoPrecio');
+    
+    // Determinar la imagen a mostrar según la categoría
+    let imagenSrc;
+    if (remera.categoria === 'actual') {
+        imagenSrc = remera.imagenes.frente_400;
+    } else if (remera.categoria === 'retro') {
+        imagenSrc = remera.imagenes.frente_512;
+    }
+    
+    // Formatear precio
+    const precioFormateado = new Intl.NumberFormat('es-AR', {
+        style: 'currency',
+        currency: 'ARS',
+        minimumFractionDigits: 0
+    }).format(remera.precio);
+    
+    // Actualizar contenido del modal
+    modalImagen.src = imagenSrc;
+    modalImagen.alt = `Camiseta ${remera.equipo}`;
+    modalNombre.textContent = remera.equipo;
+    modalCategoria.textContent = remera.categoria === 'actual' ? 'Edición Actual' : 'Edición Retro';
+    modalPrecio.textContent = precioFormateado;
+    
+    // Mostrar el modal
+    const modal = new bootstrap.Modal(document.getElementById('modalCarrito'));
+    modal.show();
+}
+
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     generarCarouselActuales();
@@ -176,8 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', (e) => {
         if (e.target.matches('.btn-primary[data-id]')) {
             const remeraId = parseInt(e.target.dataset.id);
-            console.log(`Agregando remera con ID ${remeraId} al carrito`);
-            // Aquí puedes agregar la lógica del carrito
+            mostrarModalCarrito(remeraId);
         }
     });
     

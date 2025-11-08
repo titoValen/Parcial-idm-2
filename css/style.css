@@ -6,6 +6,38 @@
     width: 54px;
 }
 
+/*
+   MODAL CARRITO
+ */
+
+#modalCarrito .modal-body {
+    padding: 1.5rem;
+}
+
+#modalCarrito .modal-body img {
+    border: 2px solid #e0e0e0;
+    transition: transform 0.3s ease;
+}
+
+#modalCarrito .modal-body img:hover {
+    transform: scale(1.05);
+}
+
+#modalCarrito .modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-bottom: none;
+}
+
+#modalCarrito .modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+#modalCarrito .modal-footer {
+    border-top: 1px solid #dee2e6;
+    padding: 1rem 1.5rem;
+}
+
 .nav-icon {
     min-height: 28px;
     padding: 0 6px;
