@@ -148,6 +148,25 @@
     min-height: 500px;
 }
 
+/* Responsive - Cards según tamaño de pantalla */
+@media (max-width: 1023px) and (min-width: 425px) {
+    .cards-wrapper .card {
+        width: calc(50% - 0.5rem);
+        max-width: 20rem;
+    }
+}
+
+@media (max-width: 424px) {
+    .cards-wrapper .card {
+        width: 100%;
+        max-width: 20rem;
+    }
+    
+    .cards-wrapper {
+        padding: 1rem 0.5rem;
+    }
+}
+
 /* Controles del carrusel de cards */
 .carousel-control-prev,
 .carousel-control-next {

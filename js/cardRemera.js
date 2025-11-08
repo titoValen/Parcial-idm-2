@@ -41,8 +41,23 @@ function crearCard(remera) {
     return card;
 }
 
-// Función para agrupar remeras en grupos de 3
-function agruparRemeras(remeras, porGrupo = 3) {
+// Función para obtener el número de cards por grupo según el ancho de pantalla
+function getCardsPerSlide() {
+    const width = window.innerWidth;
+    if (width <= 425) {
+        return 1;
+    } else if (width <= 1024) {
+        return 2;
+    } else {
+        return 3;
+    }
+}
+
+// Función para agrupar remeras según el tamaño de pantalla
+function agruparRemeras(remeras, porGrupo = null) {
+    if (porGrupo === null) {
+        porGrupo = getCardsPerSlide();
+    }
     const grupos = [];
     for (let i = 0; i < remeras.length; i += porGrupo) {
         grupos.push(remeras.slice(i, i + porGrupo));
@@ -79,8 +94,8 @@ function generarCarouselActuales() {
     // Limpiar el contenido existente
     carouselInner.innerHTML = '';
     
-    // Agrupar las remeras en grupos de 3
-    const grupos = agruparRemeras(remerasActuales, 3);
+    // Agrupar las remeras según el tamaño de pantalla
+    const grupos = agruparRemeras(remerasActuales);
     
     // Crear cada carousel-item
     grupos.forEach((grupo, index) => {
@@ -98,6 +113,12 @@ function generarCarouselRetro() {
         return;
     }
     
+    // Eliminar carousel existente si hay uno
+    const carouselExistente = document.querySelector('#carouselRetro');
+    if (carouselExistente) {
+        carouselExistente.remove();
+    }
+    
     // Crear el carousel completo
     const carouselDiv = document.createElement('div');
     carouselDiv.id = 'carouselRetro';
@@ -106,8 +127,8 @@ function generarCarouselRetro() {
     const carouselInner = document.createElement('div');
     carouselInner.className = 'carousel-inner';
     
-    // Agrupar las remeras retro en grupos de 3
-    const grupos = agruparRemeras(remerasRetro, 3);
+    // Agrupar las remeras retro según el tamaño de pantalla
+    const grupos = agruparRemeras(remerasRetro);
     
     // Crear cada carousel-item
     grupos.forEach((grupo, index) => {
@@ -158,5 +179,15 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(`Agregando remera con ID ${remeraId} al carrito`);
             // Aquí puedes agregar la lógica del carrito
         }
+    });
+    
+    // Regenerar carouseles al cambiar el tamaño de la ventana
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            generarCarouselActuales();
+            generarCarouselRetro();
+        }, 250);
     });
 });
