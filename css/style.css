@@ -186,6 +186,43 @@
     object-fit: contain;
 }
 
+/*
+   SECCIONES PREGUNTAS FRECUENTES Y CONTACTO
+ */
+@media (max-width: 800px) {
+    #preguntas-frecuentes > div {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    #preguntas-frecuentes > div .accordion {
+        width: 100% !important;
+    }
+
+    #preguntas-frecuentes > div picture {
+        width: 100% !important;
+    }
+
+    #contacto > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contacto > div picture {
+        width: 100% !important;
+    }
+
+    #contacto > div form {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 500px) {
+    #contacto > div > form > div {
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+}
 
 /*
    ANIMACIONES
@@ -195,6 +232,7 @@
     0% {
         transform: translateY(-10%) scale(1);
     }
+
     100% {
         transform: translateY(0%) scale(1.1);
     }
@@ -205,6 +243,7 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -217,21 +256,22 @@
  */
 
 @media (max-width: 768px) {
+
     /* Carrusel principal */
     #carouselExampleSlidesOnly {
         height: 70vh;
         min-height: 400px;
     }
-    
+
     .carousel-overlay-content h1,
     .carousel-overlay-content h2 {
         font-size: 2rem;
     }
-    
+
     .carousel-overlay-content p {
         font-size: 1.2rem;
     }
-    
+
     .carousel-overlay-content .btn {
         font-size: 1rem;
         padding: 10px 20px;
@@ -242,7 +282,7 @@
         width: 100%;
         max-width: 20rem;
     }
-    
+
     .cards-wrapper {
         padding: 1rem 0.5rem;
     }
@@ -263,12 +303,12 @@
         height: 60vh;
         min-height: 350px;
     }
-    
+
     .carousel-overlay-content h1,
     .carousel-overlay-content h2 {
         font-size: 1.5rem;
     }
-    
+
     .carousel-overlay-content p {
         font-size: 1rem;
     }
